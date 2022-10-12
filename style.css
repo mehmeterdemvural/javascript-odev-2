@@ -3,7 +3,7 @@
   background-color: #f78501;
 }
 
-input{
+input {
   width: 75%;
   margin-right: 0%;
   padding: 10px;
@@ -11,6 +11,7 @@ input{
   float: left;
   font-size: 18px;
 }
+
 
 #liveToastBtn {
   background-color: #DCDCDC;
@@ -90,7 +91,7 @@ ul li.checked::before {
   width: 7px;
 }
 
-#list{
+#list {
   padding-left: 0px;
   text-indent: 2%;
 }
@@ -100,21 +101,9 @@ ul li.checked::before {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
-  color: #f78501;
 }
 
 .close:hover {
   background-color: #fff;
   color: white;
-
-}
-
-.form-check-input{
-  width: 10%;
-  padding: auto;
-  margin: auto;
-}
-
-.form-check-label{
-  width: 80%;
 }

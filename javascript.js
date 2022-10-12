@@ -20,16 +20,17 @@ function newElement(onclick) {
         toastFunction("Veri, Başarılı Bir Şekilde Eklenmiştir.");
 
 
-        let span = document.createElement("SPAN");
-        let txt = document.createTextNode("\u00D7");
+        let span = document.createElement("span");
+        span.innerHTML = "X";
+        // let txt = document.createTextNode("x");
         span.className = "close";
-        span.appendChild(txt);
+        // span.appendChild(txt);
         newLi.appendChild(span);
-   
+
         for (let i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
+            close[i].onclick = function () {
                 var div = this.parentElement;
-                div.style.display ="none"
+                div.style.display = "none"
             }
         }
 
