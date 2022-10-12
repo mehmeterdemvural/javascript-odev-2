@@ -15,7 +15,7 @@ function newElement(onclick) {
         newLi.id = `li-${liCounter}`;
         taskDOM.value = `${taskDOM.value[0].toUpperCase()}${taskDOM.value.slice(1).toLowerCase()}`;
         newLi.innerHTML = taskDOM.value;
-        // localStorage.setItem(`kayıt-${liCounter}`, taskDOM.value);
+        localStorage.setItem(`kayıt-${liCounter}`, taskDOM.value);
         taskDOM.value = "";
         toastFunction("Veri, Başarılı Bir Şekilde Eklenmiştir.");
 
