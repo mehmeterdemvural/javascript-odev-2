@@ -23,7 +23,7 @@ function newElement(onclick) {
         localStorage.setItem(`${newLi.id}`, taskDOM.value);
         newLi.innerHTML = taskDOM.value;
         taskDOM.value = "";
-        toastFunction("Veri, Başarılı Bir Şekilde Eklenmiştir.");
+        toastFunction("Veri Ekleme İşlemi Gerçekleşti.");
 
 
         let span = document.createElement("span");
@@ -39,6 +39,7 @@ function newElement(onclick) {
                 // listDOM.removeChild(div);
                 div.style.display = "none";
                 localStorage.removeItem(`${div.id}`);
+                toastFunction("Veri Silme İşlemi Gerçekleşti.");
             }
         }
 
@@ -95,20 +96,21 @@ if (localStorage.length > 1) {
             span.className = "close";
             // span.appendChild(txt);
             newLi.appendChild(span);
-        
+
             for (let i = 0; i < close.length; i++) {
                 close[i].onclick = function () {
                     var div = this.parentElement;
                     // listDOM.removeChild(div);
                     div.style.display = "none";
                     localStorage.removeItem(`${div.id}`);
+                    toastFunction("Veri Silme İşlemi Gerçekleşti.");
                 }
             }
         };
     }
 
 } else {
-    if (localStorage.getItem("idCounter")){
+    if (localStorage.getItem("idCounter")) {
         localStorage.removeItem("idCounter")
     }
 }
